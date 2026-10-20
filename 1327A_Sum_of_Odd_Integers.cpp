@@ -3,15 +3,12 @@ using namespace std;
 int main(){
     int t;
     cin>>t;
-    while(t>0){
-        long long n,k;
+    while(t--){
+        unsigned long long n,k;
         cin>>n>>k;
-        if(n%2==k%2&&n>=k*k){
-            cout<<"YES"<<endl;
-        }else{
-            cout<<"NO"<<endl;
-        }
-        t--;
+        unsigned long long product = k*k;
+        if(n>=product && ((n-k)%2==0)) cout<<"Yes"<<"\n";
+        else cout<<"No"<<"\n";
     }
     return 0;
 }
